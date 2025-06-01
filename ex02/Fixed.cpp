@@ -119,7 +119,7 @@ Fixed Fixed::operator--(int) {
 	Fixed temp = *this; 
 	this->fix_num--;
 	return temp;		
-}\
+}
 
 Fixed &Fixed::operator--() {
 	this->fix_num--; 
@@ -127,8 +127,7 @@ Fixed &Fixed::operator--() {
 }
 
 Fixed::~Fixed() {
- DisplayMessage("Destructor called");
- // No dynamic memory to free, so nothing to do here
+	DisplayMessage("Destructor called");  // No dynamic memory to free, so nothing to do here
 }
 
 int Fixed::getRawBits(void) const {
@@ -153,7 +152,7 @@ std::ostream &operator<<(std::ostream &os, const Fixed &fixed) {
  return os;
 }
 
-// Static member functions for min and max
+// MIN and MAX functions
 Fixed &Fixed::min(Fixed &a, Fixed &b)
 {
 	if (a < b)
