@@ -8,11 +8,12 @@ class Fixed {
 		int fix_num;
 		static const int frac_bits = 8;
 	public:
-		Fixed();
-		Fixed(const Fixed &other);
+		Fixed(); // 1. Default constructor
+		Fixed(const Fixed &other); // 2. Copy Constructor
 		Fixed(const int num);
 		Fixed(const float float_num);
-		Fixed &operator=(const Fixed &other);
+		Fixed &operator=(const Fixed &other); // 3. Copy assignment operator
+		~Fixed(); // 4. Destructor
 		bool operator>(const Fixed &other) const;
 		bool operator<(const Fixed &other) const;
 		bool operator>=(const Fixed &other) const;
@@ -27,7 +28,6 @@ class Fixed {
 		Fixed &operator++(); // Prefix increment
 		Fixed operator--(int); // Postfix decrement
 		Fixed &operator--();   // Prefix decrement
-		~Fixed();
 		int getRawBits(void)const;
 		void setRawBits(int const raw);
 		float toFloat(void) const;
