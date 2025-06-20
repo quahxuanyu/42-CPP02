@@ -146,7 +146,7 @@ int Fixed::toInt(void) const {
 	  return this->fix_num >> frac_bits; // Convert fixed-point to integer
 }
 
-// Overload the output operator to print the fixed-point number
+// Overload the stream insertion operator to print the fixed-point number
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed) {
  os << fixed.toFloat(); // Output the fixed-point number as a float
  return os;

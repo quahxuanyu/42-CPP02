@@ -7,10 +7,10 @@ class Fixed {
 		int fix_num;
 		static const int frac_num = 8;
 	public:
-		Fixed();
-		Fixed(const Fixed &other);
-		Fixed &operator=(const Fixed &other);
-		~Fixed();
+		Fixed(); // Default constructor
+		Fixed(const Fixed &other); // Copy constructor
+		Fixed &operator=(const Fixed &other); // Assignment operator
+		~Fixed(); // Destructor
 		int getRawBits(void)const;
 		void setRawBits(int const raw);
 };

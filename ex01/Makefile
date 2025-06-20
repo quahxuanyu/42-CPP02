@@ -1,6 +1,5 @@
-CXX = c++
-CXX_FLAGS = -Wall -Wextra -Werror -std=c++11
-
+CXX = g++
+CXX_FLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = Fixed.cpp main.cpp
 OBJS = $(SRC:.cpp=.o)
 
